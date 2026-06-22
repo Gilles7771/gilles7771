@@ -1,0 +1,678 @@
+/* Reset global et corrections de syntaxe */
+html, body {
+    height: 100%;
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: azure;
+}
+
+/* Conteneur Principal */
+.container-parent {
+    display: flex;
+    min-height: 100vh;
+    gap: 30px;
+    align-items: stretch;
+}
+
+/* Linke Sidebar (Modifiée pour un rendu moderne) */
+.beschreibungdiv { 
+    flex: 0 0 280px; /* Largeur fixe et stable de 280px */
+    background: linear-gradient(135deg, #001f3f, #004080); /* Un bleu nuit dégradé plus pro */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.name-sidebar {
+    color: #00e5ff; /* Aqua clair pour faire ressortir ton nom */
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%; /* Optionnel : met ta photo en rond pour un effet plus moderne */
+    border: 3px solid #00e5ff;
+    margin-top: 25px;
+}
+
+/* Rechter Hauptinhalt */
+.menudiv { 
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Navigation */
+.buttondiv {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px; /* Espace entre les boutons de navigation */
+    margin-bottom: 15px;
+}
+
+/* Boutons de navigation généraux */
+.button1, .button2, .button3, .button4, .button5, .button6 {
+    background-color: aqua;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s; /* Corrigé : 0.2s au lieu de 0,2s */
+}
+
+.button1:hover, .button2:hover, .button3:hover, .button4:hover, .button5:hover {
+    transform: scale(1.05);
+    background-color: #00e5e5;
+}
+
+/* Bouton Télécharger CV */
+.beschreibungdiv a {
+    text-decoration: none;
+}
+
+.buttoncv {
+    background-color: aqua;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.2s; /* Corrigé : 0.2s */
+    margin-top: 15px;
+}
+
+.buttoncv:hover { /* Corrigé : Espace supprimé avant le :hover */
+    transform: scale(1.05);
+    background-color: #00e5e5;
+}
+
+/* Infos & Section Textes */
+.infodiv {
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-sizing: border-box;
+}
+
+.infodiv table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+.infodiv tr {
+    height: 50px;
+    border-bottom: 1px solid #eee; /* Lignes séparatrices plus discrètes */
+}
+
+.infodiv td {
+    padding: 10px;
+}
+
+.infodiv td:first-child {
+    width: 50px; /* Aligne la colonne des icônes */
+    text-align: center;
+}
+
+.infodiv td img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Titres de section */
+.titre {
+    text-align: left;
+    color: #004080; /* Corrigé : Couleur foncée pour être lisible */
+    border-bottom: 2px solid aqua;
+    padding-bottom: 5px;
+    margin-top: 40px;
+    font-size: 1.8rem;
+}
+
+h3 {
+    color: #333;
+    margin-top: 25px;
+}
+
+/* Badges (Langues, Hobbys, Soft Skills) */
+.badge {
+    display: inline-block;
+    background-color: aqua;
+    color: black;
+    border-radius: 5px;
+    padding: 6px 12px;
+    margin: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.badge-hobby { background-color: #26e6e6; }
+.badge-skill { background-color: #40e6e6; }
+
+/* Liste des compétences */
+.skills-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.skills-list li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   Pages Optionnelles (Zertifikate & Kontakt) - Gardées intactes et nettoyées
+   ========================================================================== */
+/* --- Style Spécifique pour la Page Contact --- */
+
+.page-kontakt {
+    /* Un dégradé très doux pour remplacer le gris terne */
+    background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    box-sizing: border-box;
+}
+
+/* La carte principale sur deux colonnes */
+.contact-card {
+    display: flex;
+    width: 100%;
+    max-width: 1000px; /* Plus large pour accueillir les coordonnées */
+    background-color: white;
+    border-radius: 20px; /* Coins très arrondis modernes */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06); /* Ombre très douce */
+    overflow: hidden; /* Pour que les arrondis s'appliquent partout */
+    box-sizing: border-box;
+}
+
+/* === Colonne de gauche (Infos) === */
+.contact-info {
+    flex: 1;
+    background: linear-gradient(135deg, #001f3f 0%, #004080 100%); /* Rappel du bleu de ta sidebar */
+    color: white;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.contact-info h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #00e5ff; /* Aqua brillant pour le titre */
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.info-details {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1rem;
+}
+
+.info-item i {
+    font-size: 1.3rem;
+    color: #00e5ff;
+    width: 30px;
+    text-align: center;
+}
+
+.info-item a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.info-item a:hover {
+    color: #00e5ff;
+}
+
+/* === Colonne de droite (Formulaire) === */
+.contact-form-container {
+    flex: 1.2; /* Légèrement plus large que la colonne info */
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.contact-form-container h2 {
+    font-size: 2.2rem;
+    color: #004080;
+    margin-bottom: 30px;
+}
+
+/* Structure du formulaire moderne */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Style des champs de saisie modernes */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px 18px;
+    border: 1px solid #e0e0e0; /* Bords gris très fins */
+    border-radius: 8px; /* Coins arrondis */
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: #fcfcfc;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Effet au survol des champs */
+.form-group input:hover,
+.form-group textarea:hover {
+    border-color: #ccc;
+}
+
+/* Effet focus quand on clique sur un champ */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #00e5ff; /* Ta couleur thème */
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.15); /* Halot lumineux */
+    outline: none;
+    background-color: white;
+}
+
+/* Bouton d'envoi modernisé */
+.button-submit {
+    width: 100%;
+    background-color: aqua; /* Ta couleur thème */
+    color: black;
+    border: none;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espace entre texte et icône */
+}
+
+.button-submit:hover {
+    transform: translateY(-3px); /* Se soulève légèrement */
+    background-color: #00e5e5; /* Plus foncé au survol */
+    box-shadow: 0 5px 15px rgba(0, 229, 255, 0.3); /* Ombre portée brillante */
+}
+
+.button-submit i {
+    font-size: 1.1rem;
+}
+
+/* --- Responsive pour Tablettes et Mobiles --- */
+@media (max-width: 800px) {
+    .contact-card {
+        flex-direction: column; /* Passe en une seule colonne */
+    }
+    .contact-info, .contact-form-container {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+    .contact-info h2, .contact-form-container h2 {
+        font-size: 1.8rem;
+    }
+    .contact-info, .contact-form-container {
+        padding: 30px 20px;
+    }
+}
+/* Certificats Grid */
+.zertdiv {
+  margin: 20px auto;       
+  max-width: 95%;        
+  min-height: 100px;       
+  padding: 20px;           
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;      
+  text-align: center;      
+  word-wrap: break-word;   
+}
+
+.zertdiv h1 { color: #333; margin-bottom: 20px; }
+.zertdiv p { font-size: 1.2rem; line-height: 1.6; color: #666; } 
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.cert-card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.cert-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover; 
+  display: block;
+}
+
+.cert-footer {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.cert-badge {
+  background-color: #00e5ff;
+  color: #000;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 900px) { .cert-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 550px) { .cert-grid { grid-template-columns: 1fr; } }
+
+/* Désactiver le soulignement par défaut des liens sur la grille */
+.cert-grid a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Style de la zone qui remplace l'image */
+.pdf-placeholder {
+    height: 200px;
+    background-color: #f0f4f8; /* Un gris-bleu très doux */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.2s ease;
+}
+
+/* Effet au survol de la carte */
+.cert-card:hover .pdf-placeholder {
+    background-color: #e1e8f0; 
+}
+
+.pdf-icon {
+    font-size: 3rem; /* Grand émoji document */
+}
+
+.pdf-text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #004080; 
+}
+
+/* Ajustement du footer pour afficher le nom du cours et le badge */
+.cert-footer {
+    padding: 15px;
+    display: flex;
+    flex-direction: column; /* Aligne le nom du cours au-dessus du badge */
+    align-items: flex-start;
+    gap: 8px;
+    background-color: white;
+}
+
+.cert-footer strong {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* --- Style Spécifique pour la Page Resume --- */
+
+.resume-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.resume-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.resume-title {
+    color: #004080;
+    font-size: 1.6rem;
+    border-bottom: 2px solid aqua;
+    padding-bottom: 8px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+/* Timeline (Chronologie) */
+.resume-timeline {
+    border-left: 3px solid #004080;
+    padding-left: 20px;
+    margin-left: 10px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Petit point sur la ligne */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -28px;
+    top: 5px;
+    background-color: aqua;
+    border: 3px solid #004080;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: #004080;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+}
+
+.timeline-institution {
+    font-style: italic;
+    color: #666;
+    margin: 5px 0 10px 0;
+}
+
+/* Grille des compétences (Skills) */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.skill-box h4 {
+    margin: 0 0 8px 0;
+    color: #333;
+}
+
+.skill-bar {
+    background-color: #e0e0e0;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.skill-level {
+    background-color: aqua;
+    height: 100%;
+    border-radius: 4px;
+}
+
+.skill-box span {
+    font-size: 0.85rem;
+    color: #666;
+    background: none;
+    padding: 0;
+}
+
+/* Langues */
+.languages-flex {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.lang-item {
+    background-color: #f4f6f8;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    border-left: 4px solid #004080;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    .languages-flex {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+/* --- Style Spécifique pour la Page Portfolio --- */
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eee;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+.project-image {
+    height: 180px;
+    background-color: #f4f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.project-overlay {
+    background-color: #004080;
+    color: aqua;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.project-content {
+    padding: 25px;
+    flex-grow: 1;
+}
+
+.project-content h3 {
+    margin: 0 0 12px 0;
+    color: #004080;
+    font-size: 1.3rem;
+}
+
+.project-content p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* On réutilise tes badges mais on s'assure qu'ils ne sont pas cliquables ici */
+.project-tags .badge {
+    margin: 0;
+    font-size: 0.75rem;
+    background-color: #e0f2f1;
+    color: #00796b;
+    border: 1px solid #b2dfdb;
+}
+
+/* Responsive */
+@media (max-width: 750px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr; /* 1 seule colonne sur mobile */
+    }
+}

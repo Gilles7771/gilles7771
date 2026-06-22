@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Gilles Ouoham</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="page-kontakt">
+    <div class="boutondiv">
+        <a href="index.html"><button class="button6">Startseite</button></a>
+        <a href="resume.html"><button class="button1">Resume</button></a>
+        <a href="erfahrung.html"><button class="button2">Erfahrung</button></a>
+        <a href="portfolio.html"><button class="button3">Portfolio</button></a>
+        <a href="kontakt.html"><button class="button5">Kontakt</button></a>
+    </div>
+
+    <div class="contact-main-container">
+        <div class="contact-card">
+            
+            <div class="contact-info">
+                <h2>Lassen Sie uns sprechen</h2>
+                <p>Haben Sie eine Frage oder möchten Sie gemeinsam an einem Projekt arbeiten? Ich freue mich auf Ihre Nachricht!</p>
+                
+                <div class="info-details">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:gillesaymard77@gmail.com">gillesaymard77@gmail.com</a>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+49 1573 3363544</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-linkedin"></i>
+                        <span>gilles-ouoham</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <h2>Nachricht senden</h2>
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+
+    <input type="hidden" name="access_key" value="05d06aa6-5b7f-4de4-be09-93380efc4bb0">
+
+    <div class="form-group">
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" required placeholder="Ihr vollständiger Name">
+    </div>
+
+    <div class="form-group">
+        <label for="email">E-Mail-Adresse *</label>
+        <input type="email" id="email" name="email" required placeholder="Ihre geschäftliche E-Mail-Adresse">
+    </div>
+
+    <div class="form-group">
+        <label for="message">Nachricht *</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Ihre Nachricht an mich..."></textarea>
+    </div>
+
+    <input type="hidden" name="subject" value="Neue Nachricht von Ihrem Portfolio">
+
+    <button type="submit" class="button-submit">Senden <i class="fas fa-paper-plane"></i></button>
+</form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
